@@ -53,7 +53,7 @@ h1{margin:16px 0 0;font-size:clamp(54px,8vw,94px);line-height:.91;letter-spacing
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 18px;border-radius:15px;text-decoration:none;font-weight:900;font-size:14px;border:1px solid transparent}
 .button.primary{background:#fff;color:#050505}
 .button.primary:hover{background:#eee}
-.button.coming{background:linear-gradient(135deg,var(--red),#ff5a34);color:#fff;box-shadow:0 16px 44px rgba(255,48,69,.18);cursor:default}
+.button.coming{background:linear-gradient(135deg,var(--red),#ff5a34);color:#fff;box-shadow:0 16px 44px rgba(255,48,69,.18);cursor:pointer}
 .button.secondary{background:#101012;border-color:var(--line);color:#fff}
 .micro{margin-top:13px;color:var(--dim);font-size:12px;font-weight:700}
 
