@@ -118,6 +118,9 @@ h2{font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.055em;margin:10
 .content-card strong{color:#fff}
 .contact-button{display:inline-flex;align-items:center;gap:8px;margin-top:7px;padding:12px 15px;border:1px solid #38383f;background:#111114;border-radius:14px;text-decoration:none;font-weight:900;font-size:14px}
 .contact-button:hover{border-color:#666670}
+.contact-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+button.contact-button{font:inherit;color:inherit;cursor:pointer}
+.copy-email.copied{border-color:rgba(93,226,165,.65);color:var(--green)}
 .faq h3{margin-top:0}
 .faq + .faq{border-top:1px solid #25252b;padding-top:22px;margin-top:22px}
 
