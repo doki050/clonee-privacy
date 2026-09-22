@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://doki050.github.io/clonee-privacy/sitemap.xml
+Sitemap: https://clonee.app/sitemap.xml
