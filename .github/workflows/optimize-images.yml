@@ -1,0 +1,49 @@
+name: Optimize CloneE site images
+on:
+  push:
+    paths:
+      - .github/workflows/optimize-images.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Pillow
+        run: python -m pip install 'Pillow>=10,<13'
+      - name: Generate responsive WebP icons and update image markup
+        shell: python
+        run: |
+          from pathlib import Path
+          from PIL import Image
+          source = Path("assets/app-icon.png")
+          with Image.open(source) as original:
+              icon = original.convert("RGB")
+              for size, filename in ((400, "app-icon-400.webp"), (80, "app-icon-80.webp")):
+                  output = icon.resize((size,size), Image.Resampling.LANCZOS)
+                  output.save(source.parent / filename, "WEBP", quality=85, method=6)
+          for filename in ("index.html","privacy.html","support.html"):
+              path = Path(filename)
+              html = path.read_text()
+              html = html.replace('class="brand-icon" src="assets/app-icon.png"', 'class="brand-icon" src="assets/app-icon-80.webp" width="38" height="38"')
+              if filename == "index.html":
+                  html = html.replace('class="app-icon" src="assets/app-icon.png"', 'class="app-icon" src="assets/app-icon-400.webp" width="400" height="400"')
+              path.write_text(html)
+          for path in (source, source.parent/"app-icon-400.webp", source.parent/"app-icon-80.webp"):
+              print(path, path.stat().st_size, "bytes")
+      - name: Commit optimized images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/app-icon-400.webp assets/app-icon-80.webp index.html privacy.html support.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Optimize website icons with responsive WebP assets"
+            git push
+          fi
