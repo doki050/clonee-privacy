@@ -59,7 +59,7 @@ h1{margin:16px 0 0;font-size:clamp(54px,8vw,94px);line-height:.91;letter-spacing
 
 .hero-art{position:relative;min-height:480px;display:grid;place-items:center}
 .icon-wrap{position:absolute;right:2%;top:0;width:min(42%,190px);z-index:3;transform:rotate(4deg)}
-.app-icon{width:100%;border-radius:24%;box-shadow:0 26px 90px rgba(255,48,69,.20),0 0 0 1px rgba(255,255,255,.09)}
+.app-icon{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;border-radius:24%;box-shadow:0 26px 90px rgba(255,48,69,.20),0 0 0 1px rgba(255,255,255,.09)}
 .game-card{position:relative;width:min(100%,430px);aspect-ratio:.79;border:1px solid #222228;border-radius:44px;background:linear-gradient(180deg,#0b0b0e,#050506);overflow:hidden;box-shadow:0 35px 110px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.025);transform:rotate(-2deg)}
 .game-score{position:absolute;top:29px;left:0;right:0;text-align:center;font-size:15px;color:#b4b4bc;font-weight:850;letter-spacing:.08em}
 .game-score strong{color:#fff;font-size:29px;display:block;letter-spacing:-.04em;margin-top:-3px}
