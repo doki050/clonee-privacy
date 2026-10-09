@@ -5,7 +5,7 @@
   --surface-3:#17171b;
   --text:#fff;
   --muted:#aaaab2;
-  --dim:#74747d;
+  --dim:#a0a0a8;
   --line:#28282e;
   --red:#ff3045;
   --orange:#ff8a1f;
@@ -53,7 +53,7 @@ h1{margin:16px 0 0;font-size:clamp(54px,8vw,94px);line-height:.91;letter-spacing
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 18px;border-radius:15px;text-decoration:none;font-weight:900;font-size:14px;border:1px solid transparent}
 .button.primary{background:#fff;color:#050505}
 .button.primary:hover{background:#eee}
-.button.coming{background:linear-gradient(135deg,var(--red),#ff5a34);color:#fff;box-shadow:0 16px 44px rgba(255,48,69,.18);cursor:pointer}
+.button.coming{background:linear-gradient(135deg,#b91b30,#af341c);color:#fff;box-shadow:0 16px 44px rgba(255,48,69,.18);cursor:pointer}
 .button.secondary{background:#101012;border-color:var(--line);color:#fff}
 .micro{margin-top:13px;color:var(--dim);font-size:12px;font-weight:700}
 
@@ -61,7 +61,7 @@ h1{margin:16px 0 0;font-size:clamp(54px,8vw,94px);line-height:.91;letter-spacing
 .icon-wrap{position:absolute;right:2%;top:0;width:min(42%,190px);z-index:3;transform:rotate(4deg)}
 .app-icon{width:100%;border-radius:24%;box-shadow:0 26px 90px rgba(255,48,69,.20),0 0 0 1px rgba(255,255,255,.09)}
 .game-card{position:relative;width:min(100%,430px);aspect-ratio:.79;border:1px solid #222228;border-radius:44px;background:linear-gradient(180deg,#0b0b0e,#050506);overflow:hidden;box-shadow:0 35px 110px rgba(0,0,0,.7),inset 0 0 0 1px rgba(255,255,255,.025);transform:rotate(-2deg)}
-.game-score{position:absolute;top:29px;left:0;right:0;text-align:center;font-size:15px;color:#8e8e98;font-weight:850;letter-spacing:.08em}
+.game-score{position:absolute;top:29px;left:0;right:0;text-align:center;font-size:15px;color:#b4b4bc;font-weight:850;letter-spacing:.08em}
 .game-score strong{color:#fff;font-size:29px;display:block;letter-spacing:-.04em;margin-top:-3px}
 .clone{position:absolute;font-size:clamp(29px,5vw,42px);filter:saturate(.95)}
 .clone.c1{left:12%;top:19%;transform:rotate(-12deg)}
@@ -70,7 +70,7 @@ h1{margin:16px 0 0;font-size:clamp(54px,8vw,94px);line-height:.91;letter-spacing
 .clone.c4{right:22%;top:55%;transform:rotate(-13deg)}
 .clone.c5{left:13%;bottom:17%;transform:rotate(7deg)}
 .target{position:absolute;right:13%;bottom:16%;font-size:56px;display:grid;place-items:center;width:90px;height:90px}
-.game-caption{position:absolute;bottom:24px;left:0;right:0;text-align:center;color:#676771;font-size:11px;font-weight:850;letter-spacing:.15em;text-transform:uppercase}
+.game-caption{position:absolute;bottom:24px;left:0;right:0;text-align:center;color:#b1b1b9;font-size:11px;font-weight:850;letter-spacing:.15em;text-transform:uppercase}
 
 .release-note{max-width:570px;margin:17px 0 0;padding:11px 14px;border:1px solid rgba(255,255,255,.13);border-radius:12px;color:#bdbdc5;background:rgba(255,255,255,.035);font-size:13px}
 .release-note strong{color:#fff}
@@ -83,7 +83,7 @@ h2{font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.055em;margin:10
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .step{min-height:230px;padding:26px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(180deg,#121216,#0a0a0c)}
 .step-emoji{font-size:35px;line-height:1;margin-bottom:46px}
-.step-number{color:#5f5f68;font-size:11px;font-weight:900;letter-spacing:.14em}
+.step-number{color:#aaaab2;font-size:11px;font-weight:900;letter-spacing:.14em}
 .step h3{margin:7px 0 8px;font-size:22px;letter-spacing:-.035em}
 .step p{margin:0;color:var(--muted);font-size:14px}
 
@@ -106,7 +106,7 @@ h2{font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.055em;margin:10
 .club-mark{font-size:clamp(78px,13vw,150px);line-height:1;filter:drop-shadow(0 17px 35px rgba(255,48,69,.20));transform:rotate(-5deg)}
 .club h2{font-size:clamp(40px,6vw,68px)}
 .mode-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
-.mode{padding:9px 12px;border-radius:999px;border:1px solid #37373d;color:#6f6f78;font-size:11px;font-weight:900;letter-spacing:.08em}
+.mode{padding:9px 12px;border-radius:999px;border:1px solid #55555d;color:#b4b4bd;font-size:11px;font-weight:900;letter-spacing:.08em}
 .mode.on{color:#fff;border-color:rgba(255,138,31,.5);background:rgba(255,138,31,.10)}
 
 .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -142,7 +142,7 @@ button.contact-button{font:inherit;color:inherit;cursor:pointer}
 .faq h3{margin-top:0}
 .faq + .faq{border-top:1px solid #25252b;padding-top:22px;margin-top:22px}
 
-.footer{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #202025;padding:28px 0 42px;color:#6e6e77;font-size:12px}
+.footer{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #202025;padding:28px 0 42px;color:#a0a0a8;font-size:12px}
 .footer-links{display:flex;gap:16px;flex-wrap:wrap}
 .footer a{text-decoration:none}.footer a:hover{color:#fff}
 
